@@ -43,5 +43,13 @@ function drawWinCanvas(timeString) {
     ctx.font = "20px Arial";
     ctx.fillText("Uhrzeit: " + timeString, winCanvas.width/2, 160);
 }
+shareBtn.addEventListener("click", () => {
+    // Zufällige Zahl zwischen 1000 und 9999
+    const randomNumber = Math.floor(Math.random() * 100) + 10;
 
+    const dataUrl = winCanvas.toDataURL("image/png");
+    const message = `Schau mal! Ich habe im Holiday Adventure Quiz gewonnen! 🎉 ${randomNumber}`;
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}&image=${encodeURIComponent(dataUrl)}`;
+    window.open(whatsappUrl, "_blank");
+});
 
