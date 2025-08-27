@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holiday Adventure Quiz 2.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Holiday Adventure Quiz 2.0</h1>
+        <div id="quiz-screen">
+            <input type="text" id="answer-input" placeholder="Lösung eingeben">
+            <button id="submit-btn">Prüfen</button>
+            <p id="feedback"></p>
+        </div>
+
+        <div id="win-screen" class="hidden">
+            <h2>Gewonnen! 🎉</h2>
+            <p>Uhrzeit: <span id="time"></span></p>
+            <button id="share-btn">Teilen</button>
+            <canvas id="win-canvas" width="400" height="300" class="hidden"></canvas>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
