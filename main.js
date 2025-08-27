@@ -1,4 +1,4 @@
-const correctAnswer = "Weihnachten"; // hier die richtige Lösung eingeben
+const correctAnswer = "69"; // hier die richtige Lösung eingeben
 const submitBtn = document.getElementById("submit-btn");
 const answerInput = document.getElementById("answer-input");
 const feedback = document.getElementById("feedback");
