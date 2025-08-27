@@ -14,7 +14,7 @@ submitBtn.addEventListener("click", () => {
     if(answer.toLowerCase() === correctAnswer.toLowerCase()) {
         showWinScreen();
     } else {
-        feedback.textContent = "Falsche Lösung, versuche es nochmal!";
+        feedback.textContent = "Nö!";
     }
 });
 
@@ -44,8 +44,4 @@ function drawWinCanvas(timeString) {
     ctx.fillText("Uhrzeit: " + timeString, winCanvas.width/2, 160);
 }
 
-shareBtn.addEventListener("click", () => {
-    const dataUrl = winCanvas.toDataURL("image/png");
-    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent("Schau mal! Ich habe im Holiday Adventure Quiz gewonnen! 🎉")}&image=${encodeURIComponent(dataUrl)}`;
-    window.open(whatsappUrl, "_blank");
-});
+
