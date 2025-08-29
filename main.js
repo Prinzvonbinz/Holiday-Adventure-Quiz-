@@ -106,7 +106,54 @@ const shareBtn = document.getElementById("share-btn");
 const winCanvas = document.getElementById("win-canvas");
 
 // aktuelles Datum (nur YYYY-MM-DD vergleichen)
+const today = new Date().toISOString().split("T")[0]
+
+   
+// Kalender erzeugen
+const calendar = document.getElementById("calendar");
 const today = new Date().toISOString().split("T")[0];
+
+questions.forEach((q, i) => {
+  const btn = document.createElement("button");
+  btn.textContent = i + 1; // Türchen-Nummer
+
+  if (today >= q.date) {
+    btn.addEventListener("click", () => openQuestion(q));
+  } else {
+    btn.classList.add("locked");
+    btn.disabled = true;
+  }
+
+  calendar.appendChild(btn);
+});
+
+// Popup-Logik
+const questionPopup = document.getElementById("question-popup");
+const questionDate = document.getElementById("question-date");
+const questionText = document.getElementById("question-text");
+const answerInput = document.getElementById("answer-input");
+const saveBtn = document.getElementById("save-btn");
+const feedback = document.getElementById("feedback");
+const closePopup = document.getElementById("close-popup");
+
+function openQuestion(q) {
+  questionDate.textContent = "Frage vom " + q.date;
+  questionText.textContent = q.text;
+
+  // gespeicherte Antwort laden
+  answerInput.value = localStorage.getItem("answer_" + q.date) || "";
+
+  saveBtn.onclick = () => {
+    localStorage.setItem("answer_" + q.date, answerInput.value.trim());
+    feedback.textContent = "Antwort gespeichert ✅";
+  };
+
+  questionPopup.classList.remove("hidden");
+}
+
+closePopup.addEventListener("click", () => {
+  questionPopup.classList.add("hidden");
+});
 
 // Prüfen, welcher Screen gezeigt wird
 initScreen();
