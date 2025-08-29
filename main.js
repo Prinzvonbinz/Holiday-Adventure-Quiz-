@@ -1,14 +1,92 @@
 // 🎯 Hier kannst du ganz leicht Fragen hinzufügen
 // Format: { date: "YYYY-MM-DD", question: "Frage ...", answer: "Antwort" }
 const questions = [
-  { date: "2025-12-01", question: "Wie heißt der Weihnachtsmann auf Englisch?", answer: "Santa Claus" },
-  { date: "2025-12-02", question: "Welche Farbe hat Rudolf die Nase?", answer: "Rot" },
-  { date: "2025-12-03", question: "Was bringt man traditionell auf den Weihnachtsbaum?", answer: "Sterne" }
-];
+  { date: "2025-07-28", question: "*Aufgabe 1:*
+Ein Fast-Food-Laden und eine Insel haben den selben Namen. Wie viele Kilometer liegen zwischen der Insel und Oslo aufgerundet (Es gibt ein Google-Maps-Tool dafür). Bilde dann die Quersumme.
+_Bsp. (18637km ~ 19000km = QrS. 10)_?", answer: "4" },
+  { date: "2025-07-31", question: "*Aufgabe 2:*
+Lea möchte sich den 3. Teil ihrer Buch-Reihe kaufen, sie hat 20€ dabei. Der 1. Teil hat 7.50€ gekostet und der 2 Teil 10.75€.
+
+_Wahr oder Falsch:_
+- Lea kann sich das Buch leisten
+- Lea hat am Ende noch mehr 10€
+- Lea fehlt 1€ um sich das Buch zu leisten
+- Lea muss für alle Bücher insgesamt mehr als 33€ bezahlen
+
+Wahr = Zahl 5
+Falsch = Zahl 3
+
+Rechne am Ende allen Zahlen zusammen bzw. bilde die Quersumme soweit wie möglich.", answer: "7" },
+  { date: "2025-08-03", question: "*Aufgabe 3:*
+Vor laNger zeit lebte Ein mann in einem schloss voll mit kammern, die mit gold Und diamanten überfüllt waren. der mann hat davon Nie etwas ausgegeben. bis es dann gestohlen wurde ...", answer: "9" },
+  { date: "2025-08-06", question: "*Aufgabe 4:*
+Lyon, Paris = ?
+Manchester, London = ?
+Barcelona, Madrid = ?
+
+= welche Länder? = welche Sprachen?
+
+Übersetze folgendes Wort in allen 3 Sprachen, zähle die Buchstaben und bilde die Quersumme so weit wie möglich = Lösung
+
+ - Essen -", answer: "2" },
+  { date: "2025-08-09", question: "*Aufgabe 5:* 
+_BinroäedC_
+NENNNENE
+NEENENNE
+NEENEEEN
+NEEENNEE", answer: "1" },
+   { date: "2025-08-12", question: "*Aufgabe 6:*
+1961 [Europa] --> Ereignis
+Ereignis --> Ort
+Ort --> Land
+Land --> Kennzeichen [Eurofeld]
+Buchstabe [Kennzeichen] --> Zahl
+Zahl --> Lösung", answer: "4" },
+  { date: "2025-08-15", question: "*Aufgabe 7:*
+Bilde aus allen 6 Lösungszahlen Buchstaben.
+
+Bilde daraus dann eine Abkürzung mit 2 Buchstaben, die oft im Alltag genutzt wird.
+Von jung und alt.
+
+Abkürzung --> Beliebteste 
+--> letzten 3 Buchstaben
+--> Daraus Zahlen
+--> Alle 3 Zahlen addieren
+--> Quersumme", answer: "11" },
+  { date: "2025-08-18", question: "*Aufgabe 8:*
+_Pippi Langstrumpf_, _Ronja Räubertochter_ und _die Brüder Löwenherz_ haben eins gemeinsam.
+Was?
+
+Antwort = Alter (2025)
+
+Bilde die Quersumme.", answer: "10" },
+  { date: "2025-08-21", question: "*Aufgabe 9:*
+Wie lautete der allererste Gewinner vom 'Jugendwort des Jahres'?
+
+Aus wie viel Wörtern wurde das Jugendwort zusammengesetzt = Lösung", answer: "3" },
+    { date: "2025-08-24", question: "*Aufgabe 10:*
+
+*F* ood *I* sle *N* ew *T* reasure", answer: "1" },
+      { date: "2025-08-27", question: "*Aufgabe 11:*
+
+Ich mach nie wieder Fanpost auf (vor 1 Jahr)
+
+Welche beide Buchstaben stehen auf dem schwarzem Schild?
+
+Beide Buchstaben in Zahlen umwandeln und addieren.", answer: "27" },
+{ date: "2025-08-30", question: "*Aufgabe 12:*
+Rätsel 7 + 8 + 9 + 10 + 11", answer: "52" },
+  { date: "2025-09-02", question: "*Aufgabe 13:*
+Die Buslinie [Aufgabe 12] fährt vom ... Tor bis zum Tierpark (Alemannenstraße)
+
+An welchen Koordinaten liegt das ... Tor [Ort]?
+
+Bilde aus den Koordinaten die Quersumme.", answer: "68" }
+     ];
 
 // Endlösung: öffnet 1 Tag nach der letzten Frage
 const finalSolutionDate = getNextDay(questions[questions.length - 1].date);
-const finalAnswer = "Weihnachten"; // richtige Endlösung
+const finalAnswer = "68"; // richtige Endlösung
 
 // DOM Elemente
 const quizScreen = document.getElementById("quiz-screen");
