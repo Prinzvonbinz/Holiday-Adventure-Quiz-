@@ -10,6 +10,19 @@
   <div class="container">
     <h1>Holiday Adventure Quiz 2.0</h1>
 
+    <!-- Kalender -->
+<div id="calendar" class="calendar"></div>
+
+<!-- Popup für Frage -->
+<div id="question-popup" class="popup hidden">
+  <h2 id="question-date"></h2>
+  <p id="question-text"></p>
+  <input type="text" id="answer-input" placeholder="Antwort eingeben">
+  <button id="save-btn">Antwort speichern</button>
+  <p id="feedback"></p>
+  <button id="close-popup">Schließen</button>
+</div>
+    
     <!-- Fragenbereich -->
     <div id="quiz-screen">
       <h2 id="question-title"></h2>
