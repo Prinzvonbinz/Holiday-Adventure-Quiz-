@@ -46,3 +46,40 @@ button:hover {
 .hidden {
   display: none;
 }
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.calendar button {
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.calendar button.locked {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.hidden {
+  display: none;
+}
